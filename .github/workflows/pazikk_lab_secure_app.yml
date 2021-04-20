@@ -17,4 +17,4 @@ jobs:
                                                             docker pull mixeway/scanner:latest
                                                              - name: Run Scan
                                                                 run: |
-                                                                         mvn package
+                                                                         docker run -e OSS_USERNAME=p.paziew@gmail.com -e OSS_KEY=3bf58ea06a385ba874d065134d2704c4b40c7de2 -e MIXEWAY_URL=https://hub.mixeway.io -e MIXEWAY_KEY=65abbd2b-edb5-4661-b329-642036c7c832 -e MIXEWAY_PROJECT_ID=57 -e MODE=STANDALONE -e MIXEWAY_PROJECT_NAME=pazikk_lab_secure_app -e COMMIT_ID=test -e BRANCH=master -v /opt/lab_sec_audit/pazikk_lab_secure_app:/opt/sources mixeway/scanner:latest
